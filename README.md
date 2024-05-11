@@ -7,6 +7,6 @@ You can see side: [easybank-bednar.netlify.app](https://easybank-bednar.netlify.
 ### Screenshot
 
 <img src="./src/images/Zrzut ekranu 2024-05-11 140220.png" width="500">
-<img src="./src/images/Zrzut ekranu 2024-05-11 140233.png.png" width="500">
-<img src="./src/images/Zrzut ekranu 2024-05-11 140309.png.png" width="300">
-<img src="./src/images/Zrzut ekranu 2024-05-11 140330.png.png" width="300">
+<img src="./src/images/Zrzut ekranu 2024-05-11 140233.png" width="500">
+<img src="./src/images/Zrzut ekranu 2024-05-11 140309.png" width="300">
+<img src="./src/images/Zrzut ekranu 2024-05-11 140330.png" width="300">
