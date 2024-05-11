@@ -1,0 +1,29 @@
+.main {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.articles {
+	margin: 6rem 2rem;
+}
+
+.articles h2 {
+	margin-bottom: 3rem;
+	text-align: center;
+	color: var(--dark-blue);
+}
+
+@media (min-width: 1024px) {
+	.articles h2 {
+		margin-bottom: 5rem;
+		text-align: left;
+		font-size: 3.6rem;
+	}
+
+	.articlesList {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		gap: 20px;
+	}
+}

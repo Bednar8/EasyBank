@@ -1,0 +1,59 @@
+.navbar {
+	position: sticky;
+	top: 0;
+	background-color: var(--white);
+	z-index: 2;
+}
+
+.navbarBox {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	height: 50px;
+}
+
+.nav {
+	display: none;
+}
+
+.nav a {
+	text-decoration: none;
+	color: var(--grayish-blue);
+	display: block;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.navbar .burgerBtn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 1rem;
+}
+
+.btn {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	.nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+	}
+
+	.btn {
+		display: block;
+	}
+
+	.burgerBtn {
+		display: none;
+	}
+}

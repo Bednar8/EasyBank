@@ -1,0 +1,83 @@
+.header {
+	margin-bottom: 5rem;
+}
+
+.headerDesktop {
+	display: none;
+}
+
+.headerImg {
+	display: flex;
+	justify-content: center;
+	height: 300px;
+	background-position: center;
+	background-size: cover;
+	background-image: url("../../images/bg-intro-mobile.svg");
+}
+
+.headerImg img {
+	object-fit: cover;
+	margin-top: -12.5rem;
+}
+
+.headerText {
+	max-width: 500px;
+	margin: 0 2rem;
+	text-align: center;
+	margin: 0 auto;
+}
+
+h1 {
+	color: var(--dark-blue);
+	font-weight: normal;
+}
+
+.headerText p {
+	margin-bottom: 3rem;
+	line-height: 2.5rem;
+	font-size: 1.4rem;
+	color: var(--grayish-blue);
+}
+
+@media (min-width: 1024px) {
+	.header {
+		display: none;
+	}
+
+	.headerDesktop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: max-content;
+		max-width: 1200px;
+		margin: 0 auto;
+		gap: 3rem;
+	}
+
+	.headerDesktopText {
+		margin-left: 1rem;
+		margin-top: -5rem;
+	}
+
+	.headerDesktopText h1 {
+		font-size: 4.4rem;
+	}
+
+	.headerDesktopText p {
+		font-size: 1.8rem;
+		line-height: 3.5rem;
+	}
+
+	.headerDesktopBoxImg {
+		/* position: relative; */
+		margin-top: -200px;
+		width: 50%;
+	}
+
+	.headerDesktopMockup {
+		position: relative;
+		width: 200%;
+		background-image: url("../../images/bg-intro-desktop.svg");
+		background-size: cover;
+	}
+}
