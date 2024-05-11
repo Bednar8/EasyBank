@@ -38,8 +38,16 @@
 	width: 200px;
 }
 
-.socials img {
-	width: 30px;
+.socials svg {
+	cursor: pointer;
+}
+
+.socials svg path {
+	transition: fill 0.2s;
+}
+
+.socials svg:hover path {
+	fill: var(--lime-green);
 }
 
 .copy {
@@ -57,10 +65,23 @@
 .footer nav li {
 	color: var(--light-grayish-blue);
 	margin-bottom: 1.5rem;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.footer nav li:hover {
+	color: var(--lime-green);
 }
 
 .footer p {
 	margin-top: 2rem;
+}
+
+.footerIconBox {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
 }
 
 @media (min-width: 1024px) {
@@ -81,10 +102,11 @@
 	.footer nav ul {
 		display: flex;
 		text-align: left;
+		font-size: 1.6rem;
 	}
 
 	.footer nav ul div {
-		margin-left: 3rem;
+		margin-left: 6rem;
 	}
 
 	.footerWrapperNav {

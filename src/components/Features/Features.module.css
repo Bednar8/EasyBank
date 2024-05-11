@@ -25,7 +25,22 @@ h2 {
 }
 
 .featuresList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
 	margin-top: 4rem;
+}
+
+@media (min-width: 767px) {
+	.featuresList {
+		justify-content: center;
+		flex-direction: row;
+	}
+
+	.features {
+		max-width: 100%;
+	}
 }
 
 @media (min-width: 1024px) {
@@ -36,6 +51,7 @@ h2 {
 	.featuresList {
 		margin-top: 6rem;
 		display: flex;
+		flex-direction: row;
 	}
 	.featuresText {
 		text-align: left;

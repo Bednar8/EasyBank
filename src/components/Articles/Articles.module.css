@@ -7,6 +7,14 @@
 	margin: 6rem 2rem;
 }
 
+.articlesList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
 .articles h2 {
 	margin-bottom: 3rem;
 	text-align: center;
