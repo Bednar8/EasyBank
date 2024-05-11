@@ -6,6 +6,7 @@ import MobileNav from "../MobileNav/MobileNav"
 
 import Button from "../Button/Button"
 function Navbar({onToggleNav, isOpenNav}) {
+	const navItems = ["Home", "About", "Contact", "Blog", "Careers"]
 	return (
 		<>
 			<div className={styles.navbar}>
@@ -14,11 +15,11 @@ function Navbar({onToggleNav, isOpenNav}) {
 						<img src={logo} alt="logo easybank" />
 					</a>
 					<nav className={styles.nav}>
-						<a href="#">Home</a>
-						<a href="#">About</a>
-						<a href="#">Contact</a>
-						<a href="#">Blog</a>
-						<a href="#">Careers</a>
+						{navItems.map((item, i) => (
+							<a href="#" key={i}>
+								{item}
+							</a>
+						))}
 					</nav>
 					<button className={styles.burgerBtn} onClick={onToggleNav}>
 						{isOpenNav ? (

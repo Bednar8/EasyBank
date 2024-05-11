@@ -1,0 +1,28 @@
+.errorPopup {
+	position: fixed;
+	max-width: 500px;
+	border-radius: 10px;
+	top: 150px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 2rem;
+	background-color: white;
+	border: 3px solid var(--dark-blue);
+	background-image: linear-gradient(
+		315deg,
+		hsla(192, 70%, 51%, 0.671) 0%,
+		hsla(136, 65%, 51%, 0.708) 80%
+	);
+	transition: top 0.2s;
+}
+
+.errorPopup p:first-child {
+	font-size: 3rem;
+	line-height: 1rem;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.errorPopup p {
+	color: var(--dark-blue);
+}

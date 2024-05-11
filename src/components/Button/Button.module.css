@@ -12,7 +12,6 @@
 		var(--bright-cyan) 0%,
 		var(--lime-green) 80%
 	);
-	/* background: red; */
 	font-weight: bold;
 	cursor: pointer;
 	transition: filter 0.2s;

@@ -3,7 +3,7 @@ import styles from "./Footer.module.css"
 import logoImg from "../../images/logo-white.svg"
 import Button from "../Button/Button"
 
-function Footer() {
+function Footer({showErrorPopup}) {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.footerWrapper}>
@@ -68,14 +68,14 @@ function Footer() {
 					<nav>
 						<ul>
 							<div>
-								<li>About us</li>
-								<li>Contact</li>
-								<li>Blog</li>
+								<li onClick={showErrorPopup}>About us</li>
+								<li onClick={showErrorPopup}>Contact</li>
+								<li onClick={showErrorPopup}>Blog</li>
 							</div>
 							<div>
-								<li>Careers</li>
-								<li>Support</li>
-								<li>Privacy Policy</li>
+								<li onClick={showErrorPopup}>Careers</li>
+								<li onClick={showErrorPopup}>Support</li>
+								<li onClick={showErrorPopup}>Privacy Policy</li>
 							</div>
 						</ul>
 					</nav>

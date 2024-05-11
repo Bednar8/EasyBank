@@ -1,8 +1,12 @@
 import styles from "./Header.module.css"
 import imageMockups from "../../images/image-mockups.png"
+
+import {usePopup} from "../../context/Context"
 // import bgDesktop from "../../images/bg-intro-desktop.svg"
 import Button from "../Button/Button"
+
 function Header() {
+	const {isErrorPopupShow} = usePopup()
 	return (
 		<>
 			<header className={styles.header}>
@@ -36,6 +40,7 @@ function Header() {
 						</div>
 					</div>
 				</div>
+				{isErrorPopupShow && <p>hello</p>}
 			</header>
 		</>
 	)
