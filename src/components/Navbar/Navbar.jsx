@@ -5,18 +5,30 @@ import burgerIcon from "../../images/icon-hamburger.svg"
 import MobileNav from "../MobileNav/MobileNav"
 
 import Button from "../Button/Button"
+import {usePopup} from "../../context/Context"
 function Navbar({onToggleNav, isOpenNav}) {
+	const {setIsErrorPopupShow} = usePopup()
+
 	const navItems = ["Home", "About", "Contact", "Blog", "Careers"]
 	return (
 		<>
 			<div className={styles.navbar}>
 				<div className={styles.navbarBox}>
-					<a href="#" className={styles.logo}>
+					<a
+						href="#"
+						className={styles.logo}
+						onClick={() => setIsErrorPopupShow(true)}>
 						<img src={logo} alt="logo easybank" />
 					</a>
 					<nav className={styles.nav}>
 						{navItems.map((item, i) => (
-							<a href="#" key={i}>
+							<a
+								href="#"
+								key={i}
+								onClick={(e) => {
+									e.preventDefault()
+									setIsErrorPopupShow(true)
+								}}>
 								{item}
 							</a>
 						))}
@@ -29,7 +41,9 @@ function Navbar({onToggleNav, isOpenNav}) {
 						)}
 					</button>
 					<div className={styles.btn}>
-						<Button>Request Invite</Button>
+						<Button onClick={() => setIsErrorPopupShow(true)}>
+							Request Invite
+						</Button>
 					</div>
 				</div>
 			</div>

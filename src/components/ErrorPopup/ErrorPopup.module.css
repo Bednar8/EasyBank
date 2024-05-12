@@ -2,7 +2,7 @@
 	position: fixed;
 	max-width: 500px;
 	border-radius: 10px;
-	top: 150px;
+	top: -200px;
 	left: 50%;
 	transform: translateX(-50%);
 	padding: 2rem;
@@ -10,10 +10,15 @@
 	border: 3px solid var(--dark-blue);
 	background-image: linear-gradient(
 		315deg,
-		hsla(192, 70%, 51%, 0.671) 0%,
-		hsla(136, 65%, 51%, 0.708) 80%
+		hsla(192, 59%, 66%, 0.671) 0%,
+		hsla(136, 74%, 65%, 0.708) 80%
 	);
 	transition: top 0.2s;
+	z-index: 5;
+}
+
+.errorPopup.active {
+	top: 100px;
 }
 
 .errorPopup p:first-child {
@@ -24,5 +29,12 @@
 }
 
 .errorPopup p {
+	font-weight: bold;
 	color: var(--dark-blue);
+}
+
+.timer {
+	position: absolute;
+	top: 0;
+	right: 20px;
 }

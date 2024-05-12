@@ -2,8 +2,11 @@ import styles from "./Footer.module.css"
 
 import logoImg from "../../images/logo-white.svg"
 import Button from "../Button/Button"
+import {usePopup} from "../../context/Context"
 
-function Footer({showErrorPopup}) {
+function Footer() {
+	const {setIsErrorPopupShow} = usePopup()
+
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.footerWrapper}>
@@ -14,6 +17,7 @@ function Footer({showErrorPopup}) {
 						</div>
 						<div className={styles.socials}>
 							<svg
+								onClick={() => setIsErrorPopupShow(true)}
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 21 20"
 								width="30"
@@ -24,6 +28,7 @@ function Footer({showErrorPopup}) {
 								/>
 							</svg>
 							<svg
+								onClick={() => setIsErrorPopupShow(true)}
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 21 20"
 								width="30"
@@ -34,6 +39,7 @@ function Footer({showErrorPopup}) {
 								/>
 							</svg>
 							<svg
+								onClick={() => setIsErrorPopupShow(true)}
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 21 20"
 								width="30"
@@ -44,6 +50,7 @@ function Footer({showErrorPopup}) {
 								/>
 							</svg>
 							<svg
+								onClick={() => setIsErrorPopupShow(true)}
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 21 20"
 								width="30"
@@ -54,6 +61,7 @@ function Footer({showErrorPopup}) {
 								/>
 							</svg>
 							<svg
+								onClick={() => setIsErrorPopupShow(true)}
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 21 20"
 								width="30"
@@ -68,21 +76,25 @@ function Footer({showErrorPopup}) {
 					<nav>
 						<ul>
 							<div>
-								<li onClick={showErrorPopup}>About us</li>
-								<li onClick={showErrorPopup}>Contact</li>
-								<li onClick={showErrorPopup}>Blog</li>
+								<li onClick={() => setIsErrorPopupShow(true)}>About us</li>
+								<li onClick={() => setIsErrorPopupShow(true)}>Contact</li>
+								<li onClick={() => setIsErrorPopupShow(true)}>Blog</li>
 							</div>
 							<div>
-								<li onClick={showErrorPopup}>Careers</li>
-								<li onClick={showErrorPopup}>Support</li>
-								<li onClick={showErrorPopup}>Privacy Policy</li>
+								<li onClick={() => setIsErrorPopupShow(true)}>Careers</li>
+								<li onClick={() => setIsErrorPopupShow(true)}>Support</li>
+								<li onClick={() => setIsErrorPopupShow(true)}>
+									Privacy Policy
+								</li>
 							</div>
 						</ul>
 					</nav>
 				</div>
 
 				<div className={styles.footerBtnBox}>
-					<Button>Request Invite</Button>
+					<Button onClick={() => setIsErrorPopupShow(true)}>
+						Request Invite
+					</Button>
 					<p className={styles.copy}>&copy; Easybank. All Rights Reserved</p>
 				</div>
 			</div>

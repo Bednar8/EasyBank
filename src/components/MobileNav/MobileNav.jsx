@@ -1,24 +1,25 @@
+import {usePopup} from "../../context/Context"
 import styles from "./MobileNav.module.css"
 
 function MobileNav() {
+	const navItems = ["Home", "About", "Contact", "Blog", "Careers"]
+	const {setIsErrorPopupShow} = usePopup()
+
 	return (
 		<nav className={styles.mobileNav}>
 			<ul>
-				<li>
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<a href="#">About</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
-				<li>
-					<a href="#">Blog</a>
-				</li>
-				<li>
-					<a href="#">Careers</a>
-				</li>
+				{navItems.map((item, i) => (
+					<li key={i}>
+						<a
+							href="#"
+							onClick={(e) => {
+								e.preventDefault()
+								setIsErrorPopupShow(true)
+							}}>
+							{item}
+						</a>
+					</li>
+				))}
 			</ul>
 		</nav>
 	)

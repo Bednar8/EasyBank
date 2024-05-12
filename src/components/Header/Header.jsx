@@ -6,7 +6,7 @@ import {usePopup} from "../../context/Context"
 import Button from "../Button/Button"
 
 function Header() {
-	const {isErrorPopupShow} = usePopup()
+	const {setIsErrorPopupShow} = usePopup()
 	return (
 		<>
 			<header className={styles.header}>
@@ -20,7 +20,9 @@ function Header() {
 						one-stop-shop for spending, saving, budgeting, investing, and much
 						more.
 					</p>
-					<Button>Request Invite</Button>
+					<Button onClick={() => setIsErrorPopupShow(true)}>
+						Request Invite
+					</Button>
 				</div>
 			</header>
 			<header className={styles.headerDesktop}>
@@ -31,7 +33,9 @@ function Header() {
 						one-stop-shop for spending, saving, budgeting, investing, and much
 						more.
 					</p>
-					<Button>Request Invite</Button>
+					<Button onClick={() => setIsErrorPopupShow(true)}>
+						Request Invite
+					</Button>
 				</div>
 				<div className={styles.headerDesktopBoxImg}>
 					<div className={styles.headerDesktopMockup}>
@@ -40,7 +44,6 @@ function Header() {
 						</div>
 					</div>
 				</div>
-				{isErrorPopupShow && <p>hello</p>}
 			</header>
 		</>
 	)
